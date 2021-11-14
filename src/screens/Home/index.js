@@ -37,6 +37,15 @@ export default ({navigation}) => {
           5. ScrollView
         </Text>
       </View>
+
+      <View style={styles.containerTitle}>
+        <Text style={styles.title}>#Lab 3</Text>
+        <Text
+          onPress={() => navigation.navigate('Contacts')}
+          style={styles.item}>
+          1. Contacts List + Bottom Navigation + Drawer
+        </Text>
+      </View>
     </SafeAreaView>
   );
 };
