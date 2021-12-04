@@ -20,12 +20,13 @@ import Contacts from '../screens/Lab3/Contacts';
 import Profile from '../screens/Lab3/Profile';
 import Favorites from '../screens/Lab3/Favorites';
 import Users from '../screens/Lab3/User';
+import {TodoAppScreen} from '../screens/Lab4';
 
 const BottomTab = createMaterialBottomTabNavigator();
 export const Tab = () => {
   return (
     <BottomTab.Navigator
-      initialRouteName="Contacts"
+      initialRouteName="Home"
       activeColor={colors.blue}
       inactiveColor="#fff"
       labeled={false}
@@ -33,8 +34,7 @@ export const Tab = () => {
         backgroundColor: colors.black,
       }}>
       <BottomTab.Screen
-
-        name={'Home'}
+        name="Home"
         options={{
           tabBarIcon: ({color}) => (
             <Icons name="home" size={26} color={color} />
@@ -106,6 +106,7 @@ export default () => {
         <Stack.Screen name={'Styling'} component={Styling} />
         <Stack.Screen name={'ScrollView'} component={ScrollView} />
         <Stack.Screen name={'Profile'} component={Profile} />
+        <Stack.Screen name={'TodoAppScreen'} component={TodoAppScreen} />
         <Stack.Screen name={'Tab'} component={Tab} />
       </Stack.Navigator>
     </NavigationContainer>

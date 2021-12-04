@@ -46,6 +46,14 @@ export default ({navigation}) => {
           1. Contacts List + Bottom Navigation + Drawer
         </Text>
       </View>
+      <View style={styles.containerTitle}>
+        <Text style={styles.title}>#Lab 4</Text>
+        <Text
+          onPress={() => navigation.navigate('TodoAppScreen')}
+          style={styles.item}>
+          1. FireStores
+        </Text>
+      </View>
     </SafeAreaView>
   );
 };
