@@ -9,11 +9,7 @@ const ButtonSection = memo(({label, source}) => {
     <TouchableOpacity
       style={styles.container}
       onPress={() => console.log('Claim')}>
-      <Image
-        source={icons.claim_icon}
-        resizeMode="contain"
-        style={styles.image}
-      />
+      <Image source={source} resizeMode="contain" style={styles.image} />
       <Text style={styles.text}>{label}</Text>
     </TouchableOpacity>
   );

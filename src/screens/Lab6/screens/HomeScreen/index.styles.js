@@ -25,9 +25,23 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: SIZES.padding,
+  },
+  buttonSectionSubContainer: {
     flexDirection: 'row',
     height: 70,
     backgroundColor: COLORS.secondary,
     borderRadius: SIZES.radius,
   },
+  containerBookSection: {
+    paddingHorizontal: SIZES.padding,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  buttonSeeMore: {
+    ...FONTS.body3,
+    color: COLORS.lightGray,
+    alignSelf: 'flex-start',
+    textDecorationLine: 'underline',
+  }
 });

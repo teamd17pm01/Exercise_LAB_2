@@ -13,11 +13,11 @@ export const LineDivider = () => {
 const styles = StyleSheet.create({
   container: {
     width: 1,
-    paddingVertical: 5,
+    paddingVertical: 18,
   },
   line: {
     flex: 1,
-    borderLeftColor: COLORS.lightGray2,
+    borderLeftColor: COLORS.lightGray,
     borderLeftWidth: 1,
   },
 });

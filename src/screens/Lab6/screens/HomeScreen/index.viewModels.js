@@ -16,6 +16,8 @@ const initReducer = (state, action) => {
   switch (action.payload.type) {
     case 'setProfile':
       return {...state};
+    case 'setSelectedCategory':
+      return {...state, selectedCategory: action.payload.selected};
     default:
       break;
   }
@@ -23,8 +25,13 @@ const initReducer = (state, action) => {
 
 export const useModels = () => {
   const [state, dispatch] = useReducer(initReducer, initState);
+
+  const selectCategories = id => {
+    dispatch('setSelectedCategory', {payload: {selected: id}});
+  };
   return {
     state,
     dispatch,
+    selectCategories,
   };
 };
