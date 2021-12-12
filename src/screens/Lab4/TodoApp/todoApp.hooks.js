@@ -1,5 +1,6 @@
 import {useEffect, useReducer} from 'react';
 import {Keyboard} from 'react-native';
+import FireBase from '@react-native-firebase/app';
 import firestore from '@react-native-firebase/firestore';
 
 const initReducer = (state, action) => {
@@ -27,11 +28,7 @@ export const useHooks = () => {
   const [state, dispatch] = useReducer(initReducer, initState);
 
   const getData = async () => {
-    const users = await firestore().collection('Users').get();
-    console.log(
-      'Log App ~ file: todoApp.hooks.js ~ line 31 ~ getData ~ users',
-      users,
-    );
+    const users = await firestore().collection('todos').doc('1').get();
   };
 
   const onChangeTodo = value =>

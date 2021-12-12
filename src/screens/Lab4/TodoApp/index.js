@@ -47,7 +47,6 @@ export function TodoAppScreen({navigation}) {
   };
 
   const renderItem = useCallback(({item}) => {
-    console.log('Log App ~ file: index.js ~ line 12 ~ renderItem ~ item', item);
     return (
       <View key={item} style={styles.containerItem}>
         <Icons

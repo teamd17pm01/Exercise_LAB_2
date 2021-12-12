@@ -4,23 +4,24 @@ import {
   CardStyleInterpolators,
   createStackNavigator,
 } from '@react-navigation/stack';
-
+import colors from '@utils/colors';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import colors from '../utils/colors';
 import Icons from 'react-native-vector-icons/AntDesign';
 
-import Home from '../screens/Home';
-import HelloWorld from '../screens/Lab2/HelloWorld';
-import CustomComponent from '../screens/Lab2/CustomComponent';
-import StateProps from '../screens/Lab2/State_Props';
-import Styling from '../screens/Lab2/Styling';
-import ScrollView from '../screens/Lab2/ScrollView';
+import Home from '@screens/Home';
+import HelloWorld from '@screens/Lab2/HelloWorld';
+import CustomComponent from '@screens/Lab2/CustomComponent';
+import StateProps from '@screens/Lab2/State_Props';
+import Styling from '@screens/Lab2/Styling';
+import ScrollView from '@screens/Lab2/ScrollView';
 
-import Contacts from '../screens/Lab3/Contacts';
-import Profile from '../screens/Lab3/Profile';
-import Favorites from '../screens/Lab3/Favorites';
-import Users from '../screens/Lab3/User';
-import {TodoAppScreen} from '../screens/Lab4';
+import Contacts from '@screens/Lab3/Contacts';
+import Profile from '@screens/Lab3/Profile';
+import Favorites from '@screens/Lab3/Favorites';
+import Users from '@screens/Lab3/User';
+import {TodoAppScreen} from '@screens/Lab4';
+
+import {HomeScreen} from '@screens/Lab6';
 
 const BottomTab = createMaterialBottomTabNavigator();
 export const Tab = () => {
@@ -73,6 +74,15 @@ export const Tab = () => {
   );
 };
 
+const BookBottomTab = createMaterialBottomTabNavigator();
+export const BookTab = () => {
+  return (
+    <BookBottomTab.Navigator style={{backgroundColor: colors.black}}>
+      <BookBottomTab.Screen name="BookHome" component={HomeScreen} />
+    </BookBottomTab.Navigator>
+  );
+};
+
 const Stack = createStackNavigator();
 export default () => {
   const config = {
@@ -108,6 +118,7 @@ export default () => {
         <Stack.Screen name={'Profile'} component={Profile} />
         <Stack.Screen name={'TodoAppScreen'} component={TodoAppScreen} />
         <Stack.Screen name={'Tab'} component={Tab} />
+        <Stack.Screen name={'BookTab'} component={BookTab} />
       </Stack.Navigator>
     </NavigationContainer>
   );

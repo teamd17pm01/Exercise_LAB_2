@@ -54,6 +54,14 @@ export default ({navigation}) => {
           1. FireStores
         </Text>
       </View>
+      <View style={styles.containerTitle}>
+        <Text style={styles.title}>#Lab 6</Text>
+        <Text
+          onPress={() => navigation.navigate('BookTab')}
+          style={styles.item}>
+          1. Book app
+        </Text>
+      </View>
     </SafeAreaView>
   );
 };
